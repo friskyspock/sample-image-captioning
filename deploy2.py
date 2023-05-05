@@ -4,11 +4,11 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 import requests
 from io import BytesIO
 
-processor = BlipProcessor.from_pretrained("cache\models--Salesforce--blip-image-captioning-base",local_files_only=True)
+processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
 
 @st.cache_resource
 def create_model():
-    model = BlipForConditionalGeneration.from_pretrained("cache\models--Salesforce--blip-image-captioning-base",local_files_only=True)
+    model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
     return model
 
 def create_caption(raw_image,num):
