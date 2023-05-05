@@ -25,7 +25,7 @@ def create_caption(raw_image,num):
     return output
 
 def main():
-    st.title('Caption Creater')
+    st.title('Caption Creator')
 
     option = st.radio('Select an option:', ('Enter an image URL','Upload an image'))
 
